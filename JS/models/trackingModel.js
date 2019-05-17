@@ -7,7 +7,7 @@ const trackTimeSchema = mongoose.Schema({
     runner: {username : String},
     time: {type: Number},
     video: {type: String},
-    catagory: {type: String},
+    category: {type: String},
     posted: {type : Date, default: Date.now}
 });
 
@@ -20,7 +20,7 @@ trackTimeSchema.methods.serialize = function() {
         runner: this.User,
         time: this.time,
         video: this.video,
-        catagory: this.catagory,
+        category: this.category,
         posted: this.posted
     };
 };

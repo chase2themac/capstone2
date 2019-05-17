@@ -17,6 +17,7 @@ helpingHandSchema.virtual('User').get(function() {
 
 helpingHandSchema.methods.serialize = function(){
     return {
+        id: this._id,
         mentor: this.username,
         problem: this.problem,
         solution: this.solution,
