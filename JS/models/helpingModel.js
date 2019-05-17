@@ -12,7 +12,7 @@ const helpingHandSchema = mongoose.Schema({
 });
 
 helpingHandSchema.virtual('User').get(function() {
-    return `${this.username}`
+    return `${this.mentor}`
 });
 
 helpingHandSchema.methods.serialize = function(){

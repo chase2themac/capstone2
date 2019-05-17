@@ -10,10 +10,11 @@ const commentSchema = mongoose.Schema({
 });
 
 commentSchema.virtual('User').get(function() {
-    return `${this.username}`});
+    return `${this.commentor}`});
 
 commentSchema.methods.serialize = function(){
     return{
+        id: this._id,
         commenter: this.User,
         content: this.content,
         timeStamp: this.timeStamp

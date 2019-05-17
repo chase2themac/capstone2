@@ -12,7 +12,7 @@ const trackTimeSchema = mongoose.Schema({
 });
 
 trackTimeSchema.virtual('User').get(function() {
-    return `${this.username}`
+    return `${this.runner}`
 });
 
 trackTimeSchema.methods.serialize = function() {
