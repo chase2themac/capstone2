@@ -1,5 +1,5 @@
 'use strict';
-global.DATABASE_URL = ;
+global.TEST_DATABASE_URL = require('./config');
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const jwt = require('jsonwebtoken');
