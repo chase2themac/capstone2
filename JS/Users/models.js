@@ -16,6 +16,11 @@ const UserSchema = mongoose.Schema({
     },
     twitchname: {
         type: String
+    },
+    role: {
+        casual: {type: Boolean, Default: true},
+        mod: {type: Boolean, Default: false },
+        admin: {type: Boolean, Default: false}
     }
 });
 
