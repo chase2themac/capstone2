@@ -12,7 +12,7 @@ const passport = require('passport');
 // const { james: jimmy, robert: bobby } = actorSurnames;
 // console.log(jimmy); // Stewart - the variable name is jimmy, not james
 // console.log(bobby); // De Niro - the variable name is bobby, not robert
-const { router: usersRouter } = require('./users');
+const { router: usersRouter } = require('./Users/router');
 const { router: authRouter, localStrategy, jwtStrategy } = require('./auth');
 
 mongoose.Promise = global.Promise;
@@ -58,14 +58,14 @@ app.use('*', (req, res) => {
 // assumes runServer has run and set `server` to a server object
 let server;
 
-function runServer() {
+function runServer(DataBase_Url, port = PORT) {
   return new Promise((resolve, reject) => {
-    mongoose.connect(DATABASE_URL, { useMongoClient: true }, err => {
+    mongoose.connect(DataBase_Url, { useMongoClient: true }, err => {
       if (err) {
         return reject(err);
       }
       server = app
-        .listen(PORT, () => {
+        .listen(port, () => {
           console.log(`Your app is listening on port ${PORT}`);
           resolve();
         })
