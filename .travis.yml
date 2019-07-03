@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: UcHDqKxMOFfpXnL/JF5Z4N/5daa0cHZe6kTZri8Pp5k4JPt1iI/hBsq2fvSsx7XmDQeaTHJ5mSKb0uP6hJNbqeI7RJrpTiQFzAMZWrQ8HpsY6Zn0taN/cAN+APhMOL+6kH3BgMN6iD7jWJUWJ5q1StzsOBiQKzTum4+oy+mOHS7nKfn2ctHtX/mWwT4GsqJfXSCJ43DZ6NVBjAqU87T6bVGgQg2wliXsutMa0yPLwZEV8n8kUg7bxQVzaAsW5B4pSAYhHNH5z3tg8xlmnpc4xXs+kiU80qV2zNhKLBeGy+M/YVUzY36yErac4l6Y8p0iSqEEmWUDCTCizB9SoG/2+Zwuvp1NE6T2NgRnWhU7GPD8X+oh2tXsWIhihlp6S8eZEUvFSNfduiZWoC+igc1CLRc6OEHJn8NxS9WtTtgLkzhQKU9wCHA+duYha53J/pEsH4q8pNlU2ksbRz0p+wo8HoGicfpPK8a5EGR3YT6go3/h7r0bjSVkLWfpOckLDEM2bU+KhjcQACcprurh357UBJAwIlq/6ml5b6ZOv7zUOVn8mg68z85kTOiI8cqiTabnktI5tC+uGol8f4Dv9dXwfgDe2VKkH8Ts7ZrflaRN6FC0fbVOgFd5XP6+qX5GX45YQ1fYd4/PfmQg9cvTGLf61Fa84WG7urwuKBztvt3eu0k=
+  app: boiling-refuge-48429
+  on:
+    repo: chase2themac/capstone2
