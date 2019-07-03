@@ -65,6 +65,7 @@ app.delete('/times/:id/:userId', jwtAuth, (req, res) => {
         res.status(500).json({error: err.message});
     });
 });
+});
 
 app.put('/times/:id', (req, res) => {
     if (!(req.params.id && req.body.id && req.params.id === req.body.id)) {
