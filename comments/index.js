@@ -1,4 +1,4 @@
 "use strict";
-const {comments} = require('./model');
+const {Comments} = require('./model');
 
-module.export = { comments };
+module.export = { Comments };
